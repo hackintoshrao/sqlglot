@@ -45,15 +45,22 @@ class E6data(Dialect):
 
     class Generator(Generator):
         TYPE_MAPPING = {
-            **Generator.TYPE_MAPPING,
-            exp.DataType.Type.INTEGER: "INT",
-            exp.DataType.Type.NUMERIC: "DECIMAL",
-            exp.DataType.Type.CHAR: "STRING",
+            exp.DataType.Type.BOOLEAN: "BOOLEAN",
+            exp.DataType.Type.TINYINT: "TINYINT",
+            exp.DataType.Type.SMALLINT: "SMALLINT",
+            exp.DataType.Type.INT: "INTEGER",
+            exp.DataType.Type.BIGINT: "BIGINT",
+            exp.DataType.Type.FLOAT: "FLOAT",
+            exp.DataType.Type.DOUBLE: "DOUBLE",
             exp.DataType.Type.VARCHAR: "STRING",
-            exp.DataType.Type.NCHAR: "STRING",
-            exp.DataType.Type.TEXT: "STRING",
-            exp.DataType.Type.TIME: "TIMESTAMP",
-            exp.DataType.Type.DATETIME: "TIMESTAMP",
+            exp.DataType.Type.CHAR: "STRING",
+            exp.DataType.Type.DATE: "DATE",
+            exp.DataType.Type.TIMESTAMP: "TIMESTAMP",
+            exp.DataType.Type.BINARY: "BINARY",
+            exp.DataType.Type.ARRAY: "STRING",
+            exp.DataType.Type.MAP: "STRING",
+            exp.DataType.Type.STRUCT: "STRING",
+            exp.DataType.Type.DECIMAL: "DECIMAL",
         }
         TRANSFORMS = {
             **Generator.TRANSFORMS,
