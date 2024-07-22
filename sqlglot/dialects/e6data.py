@@ -70,6 +70,11 @@ class E6data(Dialect):
             E6dataDecimalExpression: lambda self, e: f"CAST({self.sql(e.this)} AS DECIMAL)",
         }
 
+        def generate(self, expression):
+            if isinstance(expression, exp.Insert):
+                raise NotImplementedError("INSERT operations are not supported in E6data")
+            return super().generate(expression)
+
     SUPPORTS_VIEWS = True
     SUPPORTS_ALTER = True
     SUPPORTS_NATIVE_DECIMAL = True
