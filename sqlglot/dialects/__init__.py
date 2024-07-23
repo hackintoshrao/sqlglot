@@ -69,6 +69,7 @@ from sqlglot.dialects.dialect import Dialect, Dialects
 from sqlglot.dialects.doris import Doris
 from sqlglot.dialects.drill import Drill
 from sqlglot.dialects.duckdb import DuckDB
+from sqlglot.dialects.e6data import E6data
 from sqlglot.dialects.hive import Hive
 from sqlglot.dialects.materialize import Materialize
 from sqlglot.dialects.mysql import MySQL
